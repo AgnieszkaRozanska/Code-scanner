@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Easy Scanner Application</string>
+    <string name="scanfailed">scan nie powiodło się</string>
+    <string name="odczytana_warto">Odczytana wartość:</string>
+</resources>
