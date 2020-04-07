@@ -3,6 +3,9 @@ package com.example.easyscannerapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.TextView
 import com.google.zxing.integration.android.IntentIntegrator
 import com.google.zxing.integration.android.IntentResult
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnScan.setOnClickListener {
+        buttonScan.setOnClickListener {
             run {
                 IntentIntegrator(this@MainActivity).initiateScan();
             }
@@ -28,16 +31,13 @@ class MainActivity : AppCompatActivity() {
         if(result != null){
 
             if(result.contents != null){
-                txtValue.text = result.contents
+                textViewValue.text = result.contents
             } else {
-                txtValue.text = getString(R.string.scanfailed)
+                textViewValue.text = getString(R.string.scanfailed)
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)
         }
     }
-
-
-
 
 }

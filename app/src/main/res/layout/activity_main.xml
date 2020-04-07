@@ -13,28 +13,32 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         android:text="@string/odczytana_warto"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtValue"
+        android:id="@+id/textViewValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="5dp"
         android:hint="@string/ShowText"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtValueLabel" />
 
     <Button
-        android:id="@+id/btnScan"
-        android:layout_width="110dp"
-        android:layout_height="66dp"
+        android:id="@+id/buttonScan"
+        android:layout_width="101dp"
+        android:layout_height="65dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="Skanuj"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtValue" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewValue" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
