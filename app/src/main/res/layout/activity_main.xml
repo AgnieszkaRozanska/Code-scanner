@@ -7,23 +7,34 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/odczytana_warto"
         android:id="@+id/txtValueLabel"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/odczytana_warto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="{{please scan first}}"
         android:id="@+id/txtValue"
-        app:layout_constraintLeft_toRightOf="@id/txtValueLabel"
-        />
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/ShowText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtValueLabel" />
+
+    <Button
         android:id="@+id/btnScan"
-        android:text="Scan"
-        app:layout_constraintTop_toBottomOf="@id/txtValueLabel"
-        />
+        android:layout_width="110dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Skanuj"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue" />
 </androidx.constraintlayout.widget.ConstraintLayout>
